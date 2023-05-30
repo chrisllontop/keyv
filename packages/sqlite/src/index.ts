@@ -77,7 +77,7 @@ class KeyvSqlite<Value = any> extends EventEmitter {
 
 		this.close = async () => {
 			const db = await options.connect!();
-			return db.close();
+			await db.close();
 		};
 	}
 
